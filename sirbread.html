@@ -36,18 +36,24 @@
     <p>email: gverma@cherrycreekschools.org </p>
     <br>
     <p>check out my stuff here: <a href="https://github.com/sirbread">https://github.com/sirbread</a></p>
-    <script src="index.js"></script>
 
     <script>
       (function() {
-        let devtools = /./;
-        devtools.toString = function() {
-          document.body.innerHTML = '<h1>gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</h1>';
+        let devtoolsOpen = false;
+        const checkDevTools = () => {
+          const threshold = 160; // Threshold size for detecting developer tools
+
+          if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+            if (!devtoolsOpen) {
+              devtoolsOpen = true;
+              document.body.innerHTML = '<h1>gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</h1>';
+            }
+          } else {
+            devtoolsOpen = false;
+          }
         };
 
-        setInterval(function() {
-          console.log(devtools);
-        }, 1000);
+        setInterval(checkDevTools, 1000); // Check every second
       })();
     </script>
   </body>
