@@ -37,5 +37,18 @@
     <br>
     <p>check out my stuff here: <a href="https://github.com/sirbread">https://github.com/sirbread</a></p>
     <script src="index.js"></script>
+
+    <script>
+      (function() {
+        let devtools = /./;
+        devtools.toString = function() {
+          document.body.innerHTML = '<h1>gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</h1>';
+        };
+
+        setInterval(function() {
+          console.log(devtools);
+        }, 1000);
+      })();
+    </script>
   </body>
 </html>
