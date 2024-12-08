@@ -15,6 +15,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
+        font-family: Arial, sans-serif; /* Set consistent font */
       }
       marquee {
         margin-bottom: 20px;
@@ -22,6 +23,12 @@
       a {
         text-decoration: none;
         color: inherit;
+      }
+      .message {
+        font-family: Arial, sans-serif; /* Ensure consistent font in the message */
+        font-size: 24px;
+        margin: 20px;
+        color: #333;
       }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -33,9 +40,9 @@
     <p>lack of css is intentional now STOP dming me about it</p>
     <p>wanna contact me for whatever reason?</p>
     <p>discord: sirbread_1 (i check here the most)</p>
-    <p>email: gverma@cherrycreekschools.org </p>
+    <p>email: <a href="mailto:gverma@cherrycreekschools.org">gverma@cherrycreekschools.org</a></p>
     <br>
-    <p>check out my stuff here: <a href="https://github.com/sirbread">https://github.com/sirbread</a></p>
+    <p>check out my stuff here: <a href="https://github.com/sirbread" target="_blank">https://github.com/sirbread</a></p>
 
     <script>
       (function() {
@@ -46,7 +53,7 @@
           if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
             if (!devtoolsOpen) {
               devtoolsOpen = true;
-              document.body.innerHTML = '<h1>gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</h1>';
+              document.body.innerHTML = '<div class="message"><h1>gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</h1></div>';
             }
           } else {
             devtoolsOpen = false;
