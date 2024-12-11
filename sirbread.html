@@ -31,8 +31,9 @@
         text-align: center;
       }
       #catcontainer img {
-        max-width: 100%;
-        height: auto;
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
       }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -58,7 +59,7 @@
             if (!devtoolsOpen) {
               devtoolsOpen = true;
               document.body.innerHTML = '<div class="message">' +
-                '<h1>gahh! you found me! here is your random cat gif:</h1>' +
+                '<p>gahh! you found me! here is your random cat gif:</p>' +
                 '<img src="http://edgecats.net/first" alt="a random cat gif!"/>' +
                 '</div>';
             }
