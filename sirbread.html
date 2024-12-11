@@ -30,6 +30,10 @@
         color: #333;
         text-align: center;
       }
+      #catcontainer img {
+        max-width: 100%;
+        height: auto;
+      }
     </style>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -53,7 +57,16 @@
           if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
             if (!devtoolsOpen) {
               devtoolsOpen = true;
-              document.body.innerHTML = '<div class="message">gahh! you found me! your reward is an honorary cat gif, dm me on discord to claim your prize</div>';
+              document.body.innerHTML = '<div id="catcontainer" onclick="moarcats();">' +
+                '<img src="http://edgecats.net" alt="random cat" />' +
+                '<p>Click for more cat gifs!</p>' +
+                '</div>' +
+                '<script type="text/javascript">' +
+                'function moarcats() {' +
+                'var catcontainer = document.getElementById("catcontainer");' +
+                'catcontainer.innerHTML = '<img src=\"http://edgecats.net\" alt=\"random cat\" />';' +
+                'return false;' +
+                '}</' + 'script>';
             }
           } else {
             devtoolsOpen = false;
