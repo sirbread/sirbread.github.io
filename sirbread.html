@@ -15,7 +15,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
-        font-size: 16px; /* Ensure consistent font size */
+        font-size: 16px; 
       }
       marquee {
         margin-bottom: 20px;
@@ -25,7 +25,7 @@
         color: inherit;
       }
       .message {
-        font-size: 16px; /* Explicit font size for consistency */
+        font-size: 16px; 
         margin: 20px;
         color: #333;
         text-align: center;
@@ -53,14 +53,14 @@
       (function() {
         let devtoolsOpen = false;
         const checkDevTools = () => {
-          const threshold = 160; // Threshold size for detecting developer tools
+          const threshold = 160; 
 
           if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
             if (!devtoolsOpen) {
               devtoolsOpen = true;
               document.body.innerHTML = '<div class="message">' +
-                '<p>gahh! you found me! here is your random cat gif:</p>' +
-                '<img src="http://edgecats.net/first" alt="a random cat gif!"/>' +
+                '<p>gahh! you found me! here is an honorary random cat gif:</p>' +
+                '<img src="http://edgecats.net/first" alt="a random cat gif! can possibly be a dog"/>' +
                 '</div>';
             }
           } else {
@@ -68,7 +68,7 @@
           }
         };
 
-        setInterval(checkDevTools, 1000); // Check every second
+        setInterval(checkDevTools, 1000);
       })();
     </script>
   </body>
