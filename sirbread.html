@@ -15,7 +15,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
-        font-size: 16px; 
+        font-size: 16px;
       }
       marquee {
         margin-bottom: 20px;
@@ -38,21 +38,23 @@
     </style>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body id="main-content">
-    <marquee>konichiiwassup</marquee>
-    <p>im [sir]bread</p>
-    <p>and like this is supposed to be my website</p>
-    <p>lack of css is intentional now STOP dming me about it</p>
-    <p>wanna contact me for whatever reason?</p>
-    <p>discord: sirbread_1 (i check here the most)</p>
-    <p>email: <a href="mailto:gverma@cherrycreekschools.org">gverma@cherrycreekschools.org</a></p>
-    <br>
-    <p>check out my stuff here: <a href="https://github.com/sirbread" target="_blank">https://github.com/sirbread</a></p>
+  <body>
+    <div id="main-content">
+      <marquee>konichiiwassup</marquee>
+      <p>im [sir]bread</p>
+      <p>and like this is supposed to be my website</p>
+      <p>lack of css is intentional now STOP dming me about it</p>
+      <p>wanna contact me for whatever reason?</p>
+      <p>discord: sirbread_1 (i check here the most)</p>
+      <p>email: <a href="mailto:gverma@cherrycreekschools.org">gverma@cherrycreekschools.org</a></p>
+      <br>
+      <p>check out my stuff here: <a href="https://github.com/sirbread" target="_blank">https://github.com/sirbread</a></p>
+    </div>
 
     <script>
       (function() {
         let devtoolsOpen = false;
-        const originalContent = document.getElementById("main-content").innerHTML;
+        const originalContent = document.getElementById("main-content").outerHTML;
 
         const checkDevTools = () => {
           const threshold = 160; 
@@ -68,7 +70,7 @@
           } else {
             if (devtoolsOpen) {
               devtoolsOpen = false;
-              document.body.innerHTML = '<div id="main-content">' + originalContent + '</div>';
+              document.body.innerHTML = originalContent;
             }
           }
         };
